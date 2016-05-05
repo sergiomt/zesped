@@ -1,0 +1,96 @@
+<%!
+
+  // Always save this file as UNIX-ASCII or else some XML retrieval pages may raise de exception: declaración de texto o XML en un lugar distinto del principio de la entidad
+
+  // --------------------------------------------------------------------------
+
+  final static String COOKIE_ENCODING = "ISO8859_1";
+
+  // --------------------------------------------------------------------------
+
+  static String getCookie (HttpServletRequest req, String sName, String sDefault) {
+    String sRetVal = null;
+    try {
+      sRetVal = com.knowgate.http.Cookies.getCookie (req, sName, sDefault, COOKIE_ENCODING);    
+    } catch (java.io.UnsupportedEncodingException neverthrown) { }
+    return sRetVal;
+  } // getCookie()
+
+  // --------------------------------------------------------------------------
+  
+  public static String nullif(String sParam) {
+    if (null!=sParam)
+      return sParam;  
+    else
+      return "";
+  }
+
+  // --------------------------------------------------------------------------
+
+  public static String nullif(String sParam, String sDefaultVal) {
+    if (null!=sParam)
+      return sParam;  
+    else
+      return sDefaultVal;
+  }
+
+  // --------------------------------------------------------------------------
+
+  public static int nullif(String sParam, int iDefaultVal) {  
+    int iRetVal = iDefaultVal;
+    try {
+      if (null!=sParam)
+        iRetVal = Integer.parseInt(sParam);
+    } catch (NumberFormatException nfe) { }
+    return iRetVal;
+  }
+
+  // --------------------------------------------------------------------------
+
+  public static String H(final String text) {
+    if (text == null) return "";
+
+    final int len = text.length();
+    StringBuffer results = new StringBuffer(len+200);
+
+    for (int i = 0; i < len; ++i) {
+      char c = text.charAt(i);
+      switch (c) {
+        case '&':
+          results.append("&amp;");
+          break;
+        case '<':
+          results.append("&lt;");
+          break;
+        case '>':
+          results.append("&gt;");
+          break;
+        case 39:
+          results.append("&#39;");
+          break;
+        case '"':
+          results.append("&quot;");
+          break;
+        default:
+          results.append(c);
+      }
+    } // next
+    return results.toString();
+  }       
+  
+%><%
+
+  request.setCharacterEncoding("UTF-8");
+
+  java.util.ResourceBundle StripesResources =  java.util.ResourceBundle.getBundle("StripesResources", request.getLocale());
+
+  String sPageName = request.getServletPath();
+  int iSlash = sPageName.lastIndexOf('/');
+  if (iSlash>=0) sPageName = sPageName.substring(iSlash+1);
+  int iDot = sPageName.lastIndexOf('.');
+  if (iDot>0) sPageName = sPageName.substring(0, iDot);
+  com.zesped.action.BaseActionBean oActionBean = (com.zesped.action.BaseActionBean) request.getAttribute("actionBean");
+  String sActionBean = null;
+  if (oActionBean!=null) sActionBean = oActionBean.getClass().getName().substring(oActionBean.getClass().getName().lastIndexOf('.')+1);
+  
+%>

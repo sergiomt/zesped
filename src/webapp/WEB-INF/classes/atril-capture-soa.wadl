@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://research.sun.com/wadl/2006/10">
+  <doc xml:lang="en" title="Deposit Rest Service"/>
+  <resources base="http://localhost:8080">
+    <resource path="atril-capture-soa/webresources/depositService/176093659137/176093659138/" id="addItemWithAttributesToDocument">
+      <doc xml:lang="en" title="addItemWithAttributesToDocument"/>
+      <method name="POST" id="addItemWithAttributes">
+        <doc xml:lang="en" title="addItemWithAttributes"/>
+        <request>
+          <param name="attributes" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="file" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/json"/>
+          <representation mediaType="multipart/form-data"/>
+          <representation mediaType="image/tiff"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="multipart/form-data"/>
+        </response>
+        <response status="201">
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+        </response>
+        <response status="500">
+          <representation mediaType="text/html;charset=utf-8"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/login" id="AuthenticateUser">
+      <doc xml:lang="en" title="AuthenticateUser"/>
+      <method name="GET" id="initLogin">
+        <doc xml:lang="en" title="initLogin"/>
+        <request>
+          <param name="USER" type="xs:string" required="true" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="PASSWORD" type="xs:string" required="true" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="WORKSTATION" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="JSESSIONID" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="text/plain"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/keepAlive" id="KeepAlive">
+      <doc xml:lang="en" title="KeepAlive"/>
+      <method name="GET" id="keepAlive">
+        <doc xml:lang="en" title="keepAlive"/>
+        <request/>
+        <response status="200">
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/validatedevice" id="ValidateDeviceService">
+      <doc xml:lang="en" title="ValidateDeviceService"/>
+      <method name="POST" id="validateDeviceInformation">
+        <doc xml:lang="en" title="validateDeviceInformation"/>
+        <request>
+          <param name="DEVICEINFORMATIONINJSON" type="xs:string" required="true" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="text/plain"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/registerevent" id="RegisterEventService">
+      <doc xml:lang="en" title="RegisterEventService"/>
+      <method name="POST" id="registerAnEvent">
+        <doc xml:lang="en" title="registerAnEvent"/>
+        <request>
+          <param name="ORIGINOFEVENT" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="CATEGORY" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="LEVEL" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="DETAILS" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="ASSOCIATEDDOCID" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/xml"/>
+        </request>
+        <response status="200">
+          <representation mediaType=""/>
+        </response>
+        <response status="">
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/captureType/{captureTypeName}" id="CaptureTypeService">
+      <doc xml:lang="en" title="CaptureTypeService"/>
+      <param name="captureTypeName" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="getCaptureType">
+        <doc xml:lang="en" title="getCaptureType"/>
+        <request>
+          <param name="locale" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/captureType/{captureTypeName}/{scannerName}" id="CaptureTypeService">
+      <doc xml:lang="en" title="CaptureTypeService"/>
+      <method name="GET" id="getConfiguration">
+        <doc xml:lang="en" title="getConfiguration"/>
+        <request>
+          <param name="captureTypeName" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="scannerName" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/octet-stream"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/captureType/{captureTypeName}/{scannerName}/attributes" id="CaptureTypeService">
+      <doc xml:lang="en" title="CaptureTypeService"/>
+      <method name="GET" id="getScannerAttributes">
+        <doc xml:lang="en" title="getScannerAttributes"/>
+        <request>
+          <param name="captureTypeName" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="scannerName" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="POST" id="createDeposit">
+        <doc xml:lang="en" title="createDeposit"/>
+        <request>
+          <param name="parentId" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/xml"/>
+        </request>
+        <response status="201">
+          <representation mediaType=""/>
+        </response>
+        <response status="">
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService/{idDeposit}" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="PUT" id="updateDepositFields">
+        <doc xml:lang="en" title="updateDepositFields"/>
+        <request>
+          <param name="idDeposit" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="200">
+          <representation mediaType=""/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService/{idDeposit}/commit" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="POST" id="commit">
+        <doc xml:lang="en" title="commit"/>
+        <request>
+          <param name="idDeposit" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService/{idDeposit}/rollback" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="POST" id="rollback">
+        <doc xml:lang="en" title="rollback"/>
+        <request>
+          <param name="idDeposit" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService/{idDeposit}" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="POST" id="createDocument">
+        <doc xml:lang="en" title="createDocument"/>
+        <request>
+          <param name="idDeposit" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="201">
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService/{idDeposit}/{idDocument}" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="PUT" id="updateDocumentFields">
+        <doc xml:lang="en" title="updateDocumentFields"/>
+        <request>
+          <param name="idDeposit" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="idDocument" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="text/html;charset=utf-8"/>
+        </response>
+        <response status="200">
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService/{idDeposit}" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="POST" id="createDocumentWithAttributes">
+        <doc xml:lang="en" title="createDocumentWithAttributes"/>
+        <request>
+          <param name="idDeposit" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService/{idDeposit}/{idDocument}" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="POST" id="addItem">
+        <doc xml:lang="en" title="addItem"/>
+        <request>
+          <param name="idDeposit" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="idDocument" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="image/tiff"/>
+        </request>
+        <response status="201">
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+    <resource path="atril-capture-soa/webresources/depositService/{idDeposit}/{idDocument}" id="DepositResource">
+      <doc xml:lang="en" title="DepositResource"/>
+      <method name="POST" id="addItemWithAttributes">
+        <doc xml:lang="en" title="addItemWithAttributes"/>
+        <request>
+          <param name="idDeposit" type="xs:string" required="false" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="idDocument" type="xs:string" required="false" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="attributes" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="file" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="multipart/form-data"/>
+          <representation mediaType="image/tiff"/>
+        </request>
+        <response status="500">
+          <representation mediaType="text/html;charset=utf-8"/>
+        </response>
+        <response status="">
+          <representation mediaType="multipart/form-data"/>
+        </response>
+        <response status="201">
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>

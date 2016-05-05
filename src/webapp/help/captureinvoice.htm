@@ -1,0 +1,34 @@
+<h2>¿Cómo se digitaliza una factura?</h2>
+<p>La digitalización de documentos se realiza mediante un applet que se conecta con el scanner a través de un driver Twain.</p>
+
+<h2>Digitalización certificada vs. digitalización no certificada</h2>
+<p>La digitalización puede ser certificada o no certificada. En el caso de ser certificada, las facturas pueden firmarse con un certificado del cliente o con un certificado de Zesped.</p>
+<p>Sólo las facturas digitalizadas en modo certificado tienen plena validez legal frente a la AEAT.</p>
+
+<h2>Lotes de facturas de una página vs. facturas multipágina</h2>
+<p>Zesped permite digitalizar lotes de facturas de una página mediante un alimentador de papel, o digitalizar facturas multipágina. No se pueden digitalizar las facturas multipágina por lotes. El funcionamiento de una página o multipágina se configura en el desplegable de <b>Opciones de Digitalización</b>.</p>
+
+<h2>Digitalización de anversos y reversos</h2>
+<p>Para las facturas que estén impresas por dos cara, Zesped permite digitalizar el anverso y el reverso simultáneamente si el scanner utilizado proporciona dicha funcionalidad. La digitalización de reversos se configura en el desplegable de <b>Opciones de Digitalización</b>.</p>
+
+<h2>Cuadro de diálogo del scanner</h2>
+<p>Para los scanners que proporcionen opciones adicionales, Zesped permite indicar que se debe mostrar un cuadro de diálogo del fabricante del scanner donde seleccionarlas.</p>
+
+<p><b>Nota sobre la resolución mínima</b>: Zesped está configurado por defecto para indicar al scanner que digitalice páginas a 300 puntos por pulgada en color. Prácticamante todos los scanners modernos son capaces de digtalizar a color en 300 ppp. La resolución del scanner no debe bajarse de 200 ppp para la digitalización certificada pues es el mínimo de calidad que exige la ley para reconocer la copia digital como válida.</p>
+
+<h2>Ciclo de Digitalización</h2>
+<table summary="Ciclo de digitalizacion" border="0">
+	<tr>
+		<td valign="top">
+			El ciclo de digitalización se compone de cuatro etapas:<br/>
+			<ol>
+				<li><b>Elegir las opciones de digitalización</b>: Las opciones de digitalización deben establecerse <b>antes</b> de inicializar el scanner. Un cambio en las opciones no surge efecto si el scanner ya ha sido inicializado.</li>
+				<li><b>Inicializar el scanner</b>: En esta etapa el applet se conecta con el scanner y le envía las opciones de digitalización. Sólo es preciso inicializar el scanner una vez, a menos que se desee cambiar las opciones de digitalización en cuyo caso hay que recargar la página y re-iniciar el scanner.</li>
+			  <li><b>Digitalización</b>: En esta etapa el scanner envía al applet las páginas digitalizadas. Hay que comprobar que el scanner tiene papel antes de comenzar la digitalizacion o puede ser necesario reinicializarlo para que se recupere de la situación de falta de papel. Se puede repetir la operación de digitalización varias veces antes de pasar a la etapa de guardar.</li>
+			<li><b>Grabación</b>: En esta etapa las imágnes digiitalizadas se envían al servidor y se almacenan como facturas. La grabación puede generar una factura o varias, en función de cómo se haya establecido el parámetro monopágina/multipágina.</li>
+			</ol>
+	  </td>
+		<td><img src="img/spacer.gif" width="20" height="1" alt="" /></td>
+		<td valign="top"><img src="help/img/ciclo.png" width="348" height="300" alt="Ciclo de Digitalizacion" /></td>
+	</tr>
+</table>

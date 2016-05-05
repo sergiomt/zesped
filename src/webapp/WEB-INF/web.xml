@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+  <display-name>zesped</display-name>
+
+	<filter>
+		<display-name>Stripes Filter</display-name>
+		<filter-name>StripesFilter</filter-name>
+		<filter-class>net.sourceforge.stripes.controller.StripesFilter</filter-class>
+		<init-param>
+			<param-name>ActionResolver.Packages</param-name>
+			<param-value>com.zesped.action</param-value>
+		</init-param>
+		<init-param>
+		  <param-name>LocalePicker.Locales</param-name>
+      <param-value>es</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Interceptor.Classes</param-name>
+      <param-value>
+        com.zesped.action.LoginInterceptor,net.sourceforge.stripes.controller.BeforeAfterMethodInterceptor
+      </param-value>
+    </init-param>
+  </filter>
+
+  <filter>
+    <filter-name>Encoding Filter</filter-name>
+    <filter-class>com.zesped.action.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter>
+    <filter-name>Caching Filter</filter-name>
+    <filter-class>com.zesped.action.CachingFilter</filter-class>
+  </filter>
+	<filter-mapping>
+		<filter-name>StripesFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>StripesFilter</filter-name>
+		<servlet-name>StripesDispatcher</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+  <filter-mapping>
+    <filter-name>Encoding Filter</filter-name>
+    <url-pattern>*.action</url-pattern>
+  </filter-mapping>
+
+  <listener>
+    <listener-class>com.zesped.action.SessionCloseListener</listener-class>
+  </listener>
+	
+	<servlet>
+		<servlet-name>StripesDispatcher</servlet-name>
+		<servlet-class>net.sourceforge.stripes.controller.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+  <servlet>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>com.sun.jersey.config.property.packages</param-name>
+      <param-value>es.ipsa.atril.capture</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>YUI JavaScript Combo Service</servlet-name>
+    <servlet-class>com.zesped.util.JavascriptComboService</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>DAO</servlet-name>
+    <servlet-class>com.zesped.DAO</servlet-class>
+    <init-param>
+      <param-name>atril.platform</param-name>
+      <param-value>Atril6</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.name</param-name>
+      <param-value>Zesped DMS</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.dialect</param-name>
+      <param-value>MySQL</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.connectionType</param-name>
+      <param-value>JDBC</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.connectionType.jdbc.driver</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.connectionType.jdbc.url</param-name>
+      <param-value>jdbc:mysql://127.0.0.1:3306/zesped?user=root&amp;password=manager</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.authentication</param-name>
+      <param-value>Database</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.authentication.cryptography.provider</param-name>
+      <param-value>BC</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.authentication.cryptography.algorithm</param-name>
+      <param-value>SHA-1</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.indexerType</param-name>
+      <param-value>Lucene</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.indexerType.indexDirectoryPath</param-name>
+      <param-value>C:\Users\SERGIO~1\ZespedLuceneIndex</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.volumeManager.mountBase</param-name>
+      <param-value>C:\Users\SERGIO~1\ZespedVols\</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.user</param-name>
+      <param-value>admin</param-value>
+    </init-param>
+    <init-param>
+      <param-name>atril.password</param-name>
+      <param-value>admin</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>StripesDispatcher</servlet-name>
+		<url-pattern>*.action</url-pattern>
+	</servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <url-pattern>/webresources/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>YUI JavaScript Combo Service</servlet-name>
+    <url-pattern>/yuicombo/JavascriptComboService</url-pattern>
+  </servlet-mapping>
+    	
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+
+  <error-page>
+    <error-code>401</error-code>
+    <location>/401.html</location>
+  </error-page>
+
+  <session-config>
+    <session-timeout>30</session-timeout> 
+  </session-config>	
+</web-app>

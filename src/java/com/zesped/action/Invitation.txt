@@ -1,0 +1,5 @@
+Bienvenido a zesped
+Estimado {#1}:
+ha recibido una invitación de acceso a la empresa {#4}.
+Para activar su cuenta de usuario en zesped haga click en el siguiente enlace:
+http://www.zesped.com/zesped/ActivateUser.action?id={#5}&pwd={#6}

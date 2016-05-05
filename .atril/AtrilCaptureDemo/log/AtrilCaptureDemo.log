@@ -1,0 +1,178 @@
+[11:18:23] INFO  es.ipsa.atril.capture.server.service.AuthenticationUser  - Id de sesión actual en initLogin: E6608ADD50CED24DAC490F993DEFD4AC
+[11:18:23] INFO  es.ipsa.atril.capture.server.service.AuthenticationUser  - Creating a new capture server
+[11:18:23] INFO  es.ipsa.atril.capture.server.service.util.LoadProperties  - Path of properties file: C:\/.atril/AtrilCaptureDemo/captureserver/conf/captureserver.properties
+[11:18:23] INFO  es.ipsa.atril.capture.server.service.util.LoadProperties  - Path of properties file: C:\/.atril/AtrilCaptureDemo/securityservice/conf/securityservice.properties
+[11:18:24] INFO  es.ipsa.atril.capture.server.dms.CaptureServerDms  - Validating the user admin
+[11:18:24] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Reading the pluging SecurityServiceTest
+[11:18:24] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - Properties : {atril.authentication.cryptography.algorithm=SHA-1, atril.authentication.cryptography.provider=BC, atril.connectionType.jdbc.password=manager, customusersessionbuilder.application=Atril-Capture-Acceptance-Test, atril.platform=Atril6, atril.connectionType.jdbc.driver=com.mysql.jdbc.Driver, atril.connectionType.jdbc.port=3306, atril.keystore.uri=C:\.atril\dms.jks, atril.connectionType.jdbc.host=127.0.0.1, atril.connectionType.jdbc.schema=zesped, atril.connectionType=JDBC, atril.keystore.password=paczckt1, atril.authentication=Database, atril.name=securityservice, atril.dialect=MySQL, customusersessionbuilder.workingdirectory=C:/, atril.connectionType.jdbc.url=jdbc:mysql://127.0.0.1:3306/zesped?user=root&password=manager, customusersessionbuilder.implementation=SecurityServiceTest, atril.connectionType.jdbc.user=root}
+[11:18:24] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - User : admin --- Password : admin
+[11:18:25] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - Iniciamos sesion para leer las cuentas del usuario : admin
+[11:18:25] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Constructor CustomUserSessionTest
+[11:18:25] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Write property GivenName : admin
+[11:18:25] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Write property FamilyName : admin
+[11:18:25] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - Actualizamos las cuentas del usuario : admin
+[11:18:25] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Update deposit containers
+[11:18:26] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - Terminamos la identificacion del usuario : admin
+[11:18:26] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Going to read Deposit containers
+[11:18:26] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - depositContainers
+[11:18:26] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Read deposit container with ID 17179869185 
+[11:18:26] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Read deposit container with ID 1361269105685 
+[11:18:26] INFO  es.ipsa.atril.capture.server.dms.CaptureServerDms  - The user admin has been successfully validated
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedSinglePageFullDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedSinglePageFullDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedSinglePageHalfDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedSinglePageHalfDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedSinglePageFullDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedSinglePageFullDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedSinglePageHalfDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedSinglePageHalfDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedSinglePageFullDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedSinglePageFullDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedSinglePageHalfDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedSinglePageHalfDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedMultiPageFullDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedMultiPageFullDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedMultiPageHalfDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedMultiPageHalfDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedMultiPageFullDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedMultiPageFullDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedMultiPageHalfDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedMultiPageHalfDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedMultiPageFullDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedMultiPageFullDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedMultiPageHalfDuplexGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedMultiPageHalfDuplexNoGUI
+[11:18:27] INFO  es.ipsa.atril.capture.server.service.AuthenticationUser  - El user es: admin, el workstation es: XPCTWAIN TIFF/JPEG Scanner y el captureServer es: es.ipsa.atril.capture.server.dms.CaptureServerDms@65b71fe6
+[11:18:27] INFO  es.ipsa.atril.capture.server.service.RegisterEventService  -  EVENT ... Origin : Capture - Category : Initialization - Level : ERROR - Details : status=The device has not been initialized with error : Capture Type not found - Document : 
+[11:19:43] INFO  es.ipsa.atril.capture.server.service.AuthenticationUser  - Id de sesión actual en initLogin: EBFA0E28C97B24032939036A2FCF10DA
+[11:19:43] INFO  es.ipsa.atril.capture.server.service.AuthenticationUser  - Creating a new capture server
+[11:19:43] INFO  es.ipsa.atril.capture.server.service.util.LoadProperties  - Path of properties file: C:\/.atril/AtrilCaptureDemo/captureserver/conf/captureserver.properties
+[11:19:43] INFO  es.ipsa.atril.capture.server.service.util.LoadProperties  - Path of properties file: C:\/.atril/AtrilCaptureDemo/securityservice/conf/securityservice.properties
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.CaptureServerDms  - Validating the user admin
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Reading the pluging SecurityServiceTest
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - Properties : {atril.authentication.cryptography.algorithm=SHA-1, atril.authentication.cryptography.provider=BC, atril.connectionType.jdbc.password=manager, customusersessionbuilder.application=Atril-Capture-Acceptance-Test, atril.platform=Atril6, atril.connectionType.jdbc.driver=com.mysql.jdbc.Driver, atril.connectionType.jdbc.port=3306, atril.keystore.uri=C:\.atril\dms.jks, atril.connectionType.jdbc.host=127.0.0.1, atril.connectionType.jdbc.schema=zesped, atril.connectionType=JDBC, atril.keystore.password=paczckt1, atril.authentication=Database, atril.name=securityservice, atril.dialect=MySQL, customusersessionbuilder.workingdirectory=C:/, atril.connectionType.jdbc.url=jdbc:mysql://127.0.0.1:3306/zesped?user=root&password=manager, customusersessionbuilder.implementation=SecurityServiceTest, atril.connectionType.jdbc.user=root}
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - User : admin --- Password : admin
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - Iniciamos sesion para leer las cuentas del usuario : admin
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Constructor CustomUserSessionTest
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Write property GivenName : admin
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Write property FamilyName : admin
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - Actualizamos las cuentas del usuario : admin
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Update deposit containers
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionBuilderTest  - Terminamos la identificacion del usuario : admin
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Going to read Deposit containers
+[11:19:43] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - depositContainers
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Read deposit container with ID 17179869185 
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Read deposit container with ID 1361269183373 
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.CaptureServerDms  - The user admin has been successfully validated
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedSinglePageFullDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedSinglePageFullDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedSinglePageHalfDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedSinglePageHalfDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedSinglePageFullDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedSinglePageFullDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedSinglePageHalfDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedSinglePageHalfDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedSinglePageFullDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedSinglePageFullDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedSinglePageHalfDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedSinglePageHalfDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedMultiPageFullDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedMultiPageFullDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedMultiPageHalfDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : UnsignedMultiPageHalfDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedMultiPageFullDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedMultiPageFullDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedMultiPageHalfDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : SignedMultiPageHalfDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedMultiPageFullDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedMultiPageFullDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedMultiPageHalfDuplexGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsInitActions  - Capture Type : ServerSignedMultiPageHalfDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.service.AuthenticationUser  - El user es: admin, el workstation es: XPCTWAIN TIFF/JPEG Scanner y el captureServer es: es.ipsa.atril.capture.server.dms.CaptureServerDms@19215e70
+[11:19:43] INFO  es.ipsa.atril.capture.server.service.CaptureTypeService  - id de sesion actual en getCaptureType de CaptureTypeService: EBFA0E28C97B24032939036A2FCF10DA
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.CaptureServerDms  - Recovering the Capture Type with name : UnsignedSinglePageHalfDuplexNoGUI
+[11:19:43] INFO  es.ipsa.atril.capture.server.dms.actions.DmsCaptureTypeActions  - Query to obtain Capture Type name UnsignedSinglePageHalfDuplexNoGUI : CaptureType$name='UnsignedSinglePageHalfDuplexNoGUI'
+[11:19:44] INFO  es.ipsa.atril.capture.server.dms.CaptureServerDms  - Recovering the Capture Type with name : UnsignedSinglePageHalfDuplexNoGUI
+[11:19:44] INFO  es.ipsa.atril.capture.server.dms.actions.DmsCaptureTypeActions  - Query to obtain Capture Type name UnsignedSinglePageHalfDuplexNoGUI : CaptureType$name='UnsignedSinglePageHalfDuplexNoGUI'
+[11:19:44] INFO  es.ipsa.atril.capture.server.service.ValidateDeviceService  - Validating the device information {"brand":"TWAIN","model":"TWAIN","serialNumber":""}
+[11:19:44] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Validating device ...
+[11:19:44] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Found 1 documents with type DeviceInformationType
+[11:19:44] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - Validating devide with document 12884901889 
+[11:19:44] INFO  es.ipsa.securityservicetest.CustomUserSessionTest  - The device is validated with document 12884901889 
+[11:19:44] INFO  es.ipsa.atril.capture.server.service.RegisterEventService  -  EVENT ... Origin : Capture - Category : Initialization - Level : APPLICATION - Details : status=The device has been initialized - Document : 12884901889
+[11:19:44] INFO  es.ipsa.atril.capture.server.service.KeepAlive  - Received request to keep alive session with id EBFA0E28C97B24032939036A2FCF10DA
+[11:20:45] INFO  es.ipsa.atril.capture.server.service.KeepAlive  - Received request to keep alive session with id EBFA0E28C97B24032939036A2FCF10DA
+[11:21:13] INFO  es.ipsa.atril.capture.server.service.DepositResource  - Creating a new deposit
+[11:21:13] INFO  es.ipsa.atril.capture.server.service.DepositResource  - Deposit Container : 
+[11:21:13] INFO  es.ipsa.atril.capture.server.dms.actions.DmsDepositActions  - Creating a new Deposit
+[11:21:13] INFO  es.ipsa.atril.capture.server.dms.CaptureServerDms  - It has created a repository with ID 4325032067073
+[11:21:13] INFO  es.ipsa.atril.capture.server.service.DepositResource  - Adding a document to the deposit 4325032067073
+[11:21:13] INFO  es.ipsa.atril.capture.server.service.DepositResource  - Adding fields {} a this document 
+[11:21:13] ERROR es.ipsa.securityservicetest.AttributePersistenceTest  - The attribute commitdate must be of type date
+[11:21:13] ERROR es.ipsa.atril.capture.server.service.DepositResource  - Error creating a document or saving its attributes Status: 500 Server Error - The attribute commitdate must be of type date
+es.ipsa.securityservicetest.exceptions.CommitDateAttributeIsNotOfTypeDateException: Status: 500 Server Error - The attribute commitdate must be of type date
+	at es.ipsa.securityservicetest.AttributePersistenceTest.validateCommitDateAttribute(AttributePersistenceTest.java:61)
+	at es.ipsa.securityservicetest.AttributePersistenceTest.isCommited(AttributePersistenceTest.java:162)
+	at es.ipsa.atril.capture.server.dms.CaptureServerDms.createDocument(CaptureServerDms.java:84)
+	at es.ipsa.atril.capture.server.service.DepositResource.createDocumentWithAttributes(DepositResource.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:699)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:304)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:240)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:164)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:462)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:164)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:563)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:403)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:286)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:272)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1730)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+[11:21:13] INFO  es.ipsa.atril.capture.server.service.RegisterEventService  -  EVENT ... Origin : Capture - Category : Process - Level : FATAL - Details : status=Error processing the deposit : es.ipsa.atril.capture.client.exception.CaptureClientException: Error saving document - Document : 12884901889
+[11:21:39] ERROR es.ipsa.atril.database.connection.JDBCConnectionProvider  - get
+java.sql.SQLException: No suitable driver found for jdbc:mysql://127.0.0.1:3306/zesped?user=root&password=manager
+	at java.sql.DriverManager.getConnection(DriverManager.java:604)
+	at java.sql.DriverManager.getConnection(DriverManager.java:243)
+	at es.ipsa.atril.database.connection.JDBCConnectionProvider.get(JDBCConnectionProvider.java:83)
+	at es.ipsa.atril.database.connection.AtrilConnectionImpl.connect(AtrilConnectionImpl.java:39)
+	at es.ipsa.atril.eventLogger.atril6.impl.persistence.database.EventDatabaseNewConnectionWriter.escribirEnPersistencia(EventDatabaseNewConnectionWriter.java:70)
+	at es.ipsa.atril.eventLogger.atril6.impl.persistence.database.EventDatabaseNewConnectionWriter.finalize(EventDatabaseNewConnectionWriter.java:86)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:101)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:32)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:178)
+[11:21:39] ERROR es.ipsa.atril.database.connection.JDBCConnectionProvider  - get
+java.sql.SQLException: No suitable driver found for jdbc:mysql://127.0.0.1:3306/zesped?user=root&password=manager
+	at java.sql.DriverManager.getConnection(DriverManager.java:604)
+	at java.sql.DriverManager.getConnection(DriverManager.java:243)
+	at es.ipsa.atril.database.connection.JDBCConnectionProvider.get(JDBCConnectionProvider.java:83)
+	at es.ipsa.atril.database.connection.AtrilConnectionImpl.connect(AtrilConnectionImpl.java:39)
+	at es.ipsa.atril.eventLogger.atril6.impl.persistence.database.EventDatabaseNewConnectionWriter.escribirEnPersistencia(EventDatabaseNewConnectionWriter.java:70)
+	at es.ipsa.atril.eventLogger.atril6.impl.persistence.database.EventDatabaseNewConnectionWriter.finalize(EventDatabaseNewConnectionWriter.java:86)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:101)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:32)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:178)

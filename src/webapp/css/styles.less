@@ -1,0 +1,1054 @@
+@boxwidth:960px;
+@backgroundcolor:#6f6f6f;
+@boxdarkcolor:#323232;
+@boxlightcolor:white;
+@displaycolor:#6da900;
+@textcolor:#323232;
+@textlightcolor:Gainsboro;
+@textbrightcolor:white;
+@textfont:Ubuntu,Arial,Helvetica,sans-serif;
+@displayfont:Ubuntu,sans-serif;
+
+html { height:100%;background-color:@backgroundcolor; }
+
+body {
+  height:100%;font-family:@textfont;color:@textcolor;font-size:small;background-color:@backgroundcolor;
+}
+
+a  { color:@displaycolor; }
+
+p  { margin-bottom: 1em;text-align:justify; }
+
+h1 {
+  color:white;font-family:@displayfont;font-size:x-large;font-weight:bold;font-smooth:always;-webkit-font-smoothing:antialiased;
+}
+
+h2 {
+  color:@displaycolor;font-family:@displayfont;font-size:large;margin-bottom:0.5em;font-smooth:always;-webkit-font-smoothing:antialiased;
+}
+
+.h2nolf {
+  color:@displaycolor;font-family:@displayfont;font-size:large;text-decoration:none;margin-right:1em;font-smooth:always;-webkit-font-smoothing:antialiased;
+}
+
+h3 {
+    color:@displaycolor;font:@textfont;font-size:large;text-align:left;font-smooth:always;-webkit-font-smoothing:antialiased;
+}
+
+fieldset {
+  color:@boxdarkcolor;border:1px solid @boxdarkcolor;padding: 1em;margin:8px 8px 8px 8px;
+}
+
+fieldset legend {
+  color:@displaycolor;font-family:@displayfont;font-size:medium;
+}
+
+ul { list-style-type:disc;padding-left:16px; }
+ul.circle { list-style-type:circle;padding-left:16px; }
+ol { list-style-type:decimal;padding-left:16px; }
+ol.alpha { list-style-type:lower-alpha;padding-left:16px; }
+
+#appname {
+  color:@displaycolor;
+  font-family:Audiowide;
+  font-size:large;
+	text-shadow: 0px 1px 1px black;
+	text-align:center;
+}
+
+#arrow {
+  color:@displaycolor;font-family:Arial,Helvetica,sans-serif;font-size:large;text-decoration:none;margin-right:1em;font-smooth:always;-webkit-font-smoothing:antialiased;
+}
+
+#header {
+  background-repeat:repeat-x;background-image:url(bg-head.jpg);width:100%;height:120px
+}
+
+#footer {
+  background-color:@boxdarkcolor;height:30px;bottom:0;padding:0;position:fixed;white-space:nowrap;z-index:99;width:100%;  
+}
+
+#contents {
+  margin-top:0px;margin-bottom:40px;background-color:@backgroundcolor;
+}
+
+#welcome {
+  width:868px;height:323px;background-color:#8acd04;background-image:url(bg-home-izq.jpg);background-repeat:repeat-x;padding-left:40px;padding-right:32px;
+}
+
+#logo {
+  margin-top:8px;
+}
+
+#loggedinfo {
+  margin-top:8px;color:@textlightcolor;
+}
+
+#errormessagebox {
+	border:thin solid @displaycolor;background-color:#f8ffF0;padding:1em;
+}
+
+#notificationmessagebox {
+	display:none;border:thin solid @displaycolor;background-color:#f8ffF0;padding:1em;height:0px;width:@boxwidth;margin-left:auto;margin-right:auto;
+}
+
+#searchfilter {
+  border-right-style:dotted;border-right-color:@textlightcolor;padding-right:6px;
+}
+
+#changeview {
+	text-align:right;width:740px;
+}
+
+#datatable {
+  width:100%;margin-left:6px;margin-right:4px;
+}
+
+#faketaxpayerlink {
+  color:@displaycolor;border-style:none;text-decoration:underline;background-color:transparent;width:100px
+}
+
+#workDiv {
+	width:32px;height:32px;
+}
+
+.faketab {
+  border-color:@textlightcolor;border-width:1px;border-top-style:solid;border-left-style:solid;border-right-style:solid;border-bottom-style:none;padding:4px 8px 4px 8px;
+}
+
+.faketabhighlight {
+  border-color:@textlightcolor;border-width:1px;border-top-style:solid;border-left-style:solid;border-right-style:solid;border-bottom-style:none;padding:4px 8px 4px 8px;background:@backgroundcolor;
+}
+
+.buttonsgrid {
+  padding:4px;float:left;
+}
+
+.claim {
+  color:#324a00;font-family:@textfont;font-size:x-large;
+}
+
+.allcaps {
+  color:@displaycolor;text-transform:uppercase;font-weight:bold;
+}
+
+.loginbox td {
+  padding-left:8px;padding-top:4px;
+}
+
+.textdisplay {
+  color:@displaycolor;
+}
+
+.textbrightlight {
+  color:@textbrightcolor;
+}
+
+.strongbrightlight {
+  .textbrightlight;font-weight:bold;text-decoration:none;
+}
+
+.stronganchorbrightlight {
+  .strongbrightlight;text-decoration:underline;
+}
+
+.texthighlight {
+  color:@textlightcolor;text-decoration:none;
+}
+
+.anchorhighlight {
+  color:@textlightcolor;
+}
+
+.stronghighlight {
+  .texthighlight;font-weight:bold;text-decoration:none;
+}
+
+.stronganchorhightlight {
+  .anchorhighlight;font-weight:bold;text-decoration:underline;
+}
+
+.textlowlight {
+  color:DarkGray;text-decoration:none;
+}
+
+.anchorlowlight {
+  .textlowlight;text-decoration:underline;
+}
+
+.stronganchorlowlight {
+  .textlowlight;font-weight:bold;text-decoration:underline;
+}
+
+.slideshow {
+  width:235px;height:280px;background-image:url(bg-flecha-footer.gif);border-top:thick solid white;
+}
+
+.slidebox {
+  margin:0px 0px 0px 0px;padding-left:34px;padding-right:6px;padding-top:4px;
+}
+
+.outerbox {
+  clear:both;padding-top:1em;
+}
+
+.centeredbox {
+    margin:auto;width:@boxwidth;height:700px;
+}
+
+.textbox {
+  background:@boxlightcolor;padding:12px;overflow:hidden;
+}
+
+.listbox {
+  background:@boxlightcolor;margin-left:6px;margin-right:4px;width:100%;
+}
+
+.fullpanel {
+  background:@boxlightcolor;margin:0px 0px 6px 0px;padding:4px 4px 4px 4px;
+}
+
+.leftpanel {
+  background:@boxlightcolor;margin:0px 0px 6px 0px;padding:4px 4px 4px 4px;
+}
+
+.rightpanel {
+  background:@boxlightcolor;margin:0px 0px 6px 6px;padding:4px 4px 4px 4px;
+}
+
+.darkbox {
+  color:@textlightcolor;background:@boxdarkcolor;margin:0px;padding:0px;width:100%;
+}
+
+.tablebox {
+  color:@textlightcolor;background:@boxdarkcolor;padding:4px 2px 2px 4px;width:94%;
+}
+
+.darkinput {
+  .texthighlight;background:@backgroundcolor;
+}
+
+.darkcombo {
+  .darkinput;width:172px;
+}
+
+.darkamount {
+  .darkinput;width:64px;
+}
+
+.lightcombo {
+  width:150px;
+}
+
+.lightamount {
+  width:60px;
+}
+
+.lightshortamount {
+  width:50px;
+}
+
+.lightdate {
+  width:76px;
+}
+
+.formfields {
+	padding:0.2em;text-align:left;
+}
+
+.formlabeloptional {
+  text-align:right;padding:6px;
+}
+
+.formlabelrequired {
+  .formlabeloptional;font-weight:bold;padding:6px;
+}
+
+.tablecontrols {
+  background:@boxdarkcolor;color:@textlightcolor;padding:0.4em;text-align:left;
+}
+.tabletabbedcontrols {
+  background:@boxdarkcolor;color:@textlightcolor;padding:0.4em 0.4em 0 0.4em;text-align:left;
+}
+.tableheader {
+  background:@backgroundcolor;color:@textlightcolor;padding:0.4em;
+}
+.tablerow0 {
+  background:white;color:@textcolor;padding:0.2em;text-align:left;
+}
+.tablerow1 {
+  background:@textlightcolor;color:@textcolor;padding:0.2em;text-align:left;
+}
+.tablefooter {
+  background:#404040;color:@textlightcolor;padding:0.4em;text-align:left;height:20px;
+}
+
+.workflow_td {
+  background-repeat:no-repeat;
+  background-position:center;
+  height:91px;
+}
+
+.workflow_caption {
+  color:@boxlightcolor;
+  font-weight:bold;
+  position:relative;
+  left:84px;
+  top:-4px;
+}
+
+#workflow_capture {
+  .workflow_td;width:204px;background-image:url(digitalizar_gray.gif);
+}
+
+#workflow_enterdata {
+  .workflow_td;width:204px;background-image:url(entrardatos_gray.gif);
+}
+
+#workflow_approve {
+  .workflow_td;width:204px;background-image:url(aprobar_gray.gif);
+}
+
+#workflow_manage {
+  .workflow_td;width:204px;background-image:url(gestionar_gray.gif);
+}
+
+#workflow_cloud {
+  .workflow_td;width:144px;background-image:url(boton-cloud-out.gif);
+}
+
+.columnitem {
+  overflow:hidden;margin:6px 6px 0px 10px;
+}
+
+.columnitem0 {
+  .columnitem;height:0px;
+}
+
+.taxpayerlist {
+  width:240px;
+}
+
+/* This imageless css button was generated by CSSButtonGenerator.com */
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809) );
+	background:-moz-linear-gradient( center top, #89c403 5%, #77a809 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809');
+	background-color:#89c403;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	color:#white;
+	font-family:@textfont;
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #528009;
+}.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403) );
+	background:-moz-linear-gradient( center top, #77a809 5%, #89c403 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403');
+	background-color:#77a809;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+
+.disabledbutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:@textfont;
+	font-size:14px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}.disabledbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.disabledbutton:active {
+	position:relative;
+	top:1px;
+}
+
+.login {
+  .button;
+  color:white;
+	padding:1px 4px;
+}
+
+.submit {
+  .button;
+  color:white;
+	padding:6px 24px;
+}
+
+.cancel {
+  .button;
+  color:maroon;
+	padding:6px 10px;
+}
+
+.disabledsubmit {
+  .disabledbutton;
+  color:white;
+	padding:6px 24px;
+}
+
+.disabledcancel {
+  .disabledbutton;
+  color:maroon;
+	padding:6px 10px;
+}
+
+/* ****************/
+/* Spiffy Corners */
+
+.spiffy { display:block; }
+.spiffy * { display:block;height:1px;overflow:hidden;font-size:.01em;background:@boxlightcolor }
+.spiffy1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #a9adc5;
+  border-right:1px solid #a9adc5;
+  background:#d9dbe5}
+.spiffy2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #787ea4;
+  border-right:1px solid #787ea4;
+  background:#e2e3eb}
+.spiffy3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #e2e3eb;
+  border-right:1px solid #e2e3eb;}
+.spiffy4{
+  border-left:1px solid #a9adc5;
+  border-right:1px solid #a9adc5}
+.spiffy5{
+  border-left:1px solid #d9dbe5;
+  border-right:1px solid #d9dbe5}
+
+
+/* ****************/
+/* Snazzy Borders */
+
+.xsnazzy { background: transparent; margin:10px 0.5em 10px 1em;clear:right;padding-top:1em; }
+.xsnazzy0 { background: transparent; margin:0px 0px 10px 0px;clear:right;padding-top:1em; }
+.xsnazzy h2   { padding-left:0.5em;padding-top:0.5em;color:darkorange; }
+.xsnazzy p    { font-size:small;padding-left:0.5em;margin:10px 0px 0px 0px; }
+.xtop, .xbottom { display:block; background:transparent; font-size:1px; }
+
+.xb1, .xb2, .xb3, .xb4 { display:block; overflow:hidden; }
+.xb1, .xb2, .xb3 { height:1px; }
+.xb2, .xb3, .xb4 { border-left:1px solid gray; border-right:1px solid @backgroundcolor; }
+.xb1 { margin:0 5px; background:@backgroundcolor; }
+.xb2 { margin:0 3px; border-width:0 2px; }
+.xb3 { margin:0 2px; }
+.xb4 { height:2px; margin:0 1px; }
+
+.xb2g {
+  .xb2; background:#72a500;
+}
+.xb3g {
+  .xb3; background:#72a500;
+}
+.xb4g {
+  .xb4; background:#72a500;
+}
+
+.xb2w {
+  .xb2; background:white;
+}
+.xb3w {
+  .xb3; background:white;
+}
+.xb4w {
+  .xb4; background:white;
+}
+
+.xb2d {
+  .xb2; background:@boxdarkcolor;
+}
+.xb3d {
+  .xb3; background:@boxdarkcolor;
+}
+.xb4d {
+  .xb4; background:@boxdarkcolor;
+}
+
+
+/*------------------------------------------*/
+/*--------- Dark Menu Styles Begin ---------*/
+/* http://www.ahmadhania.com/wp-content/uploads/demo/css3-dark-menu/ */
+
+
+@darkgradientstart:#362f2c;
+@darkgradientend:#282321;
+@hovercolor:#759828;
+/* #73635e */
+
+#darkmenu {
+	float:right;
+}
+
+/* Main Dark Menu Unordered List First Level Style */
+ul.dark_menu {
+    list-style: none;
+    padding: 0;
+    font-family: @textfont;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+/* Clears all floated List Items */
+ul.dark_menu:after {
+    content: "";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/* First Level List Items Style */
+ul.dark_menu li {
+    float: left;
+    margin: 0 0 0 10px;
+    position: relative;
+}
+
+/* First List Item in First Level Style */
+ul.dark_menu li:first-child {
+    margin: 0;
+}
+
+/* List Items Links Style */
+ul.dark_menu li a, ul.dark_menu li a:link {
+    color: @displaycolor;
+    text-decoration: none;
+    display: block;
+    padding: 10px 26px;
+    
+    /* Text Shadow */
+    text-shadow: 0 1px 0 #4b433e;
+    
+    /* Gradient Background */
+    background: @darkgradientstart; /* Old browsers */
+    background: -moz-linear-gradient(top, @darkgradientstart 0%, @darkgradientend 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@darkgradientstart), color-stop(100%,@darkgradientend)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @darkgradientstart 0%,@darkgradientend 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @darkgradientstart 0%,@darkgradientend 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, @darkgradientstart 0%,@darkgradientend 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#362f2c', endColorstr='#282321',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, @darkgradientstart 0%,@darkgradientend 100%); /* W3C */
+
+    /* Border Radius */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    /* Box Shadows */
+    -webkit-box-shadow: inset 0 1px 0 #564b46,
+                       0 1px 1px #181514;
+    -moz-box-shadow: inset 0 1px 0 #564b46,
+                     0 1px 1px #181514;
+    box-shadow: inset 0 1px 0 #564b46,
+                0 1px 1px #181514;
+
+    /* Transition Effect */
+    -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* List Items Links Hover State Style */
+ul.dark_menu li a:hover {
+    color: @hovercolor;
+
+    /* Text Shadow */
+    text-shadow: 0 1px 1px #000;
+
+    /* Gradient Background */
+    background: @darkgradientend; /* Old browsers */
+    background: -moz-linear-gradient(top, @darkgradientend 0%, @darkgradientstart 99%, @darkgradientstart 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@darkgradientend), color-stop(99%,@darkgradientstart), color-stop(100%,@darkgradientstart)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @darkgradientend 0%,@darkgradientstart 99%,@darkgradientstart 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @darkgradientend 0%,@darkgradientstart 99%,@darkgradientstart 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, @darkgradientend 0%,@darkgradientstart 99%,@darkgradientstart 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#362f2c', endColorstr='#282321',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, @darkgradientend 0%,@darkgradientstart 99%,@darkgradientstart 100%); /* W3C */
+
+    /* Transition Effect */
+    -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* List Items Links Active and Selected State Style */
+ul.dark_menu li a.selected, ul.dark_menu li a:active {
+    color: @hovercolor;
+    background: @darkgradientend;
+
+    /* Text Shadow */
+    text-shadow: 0 1px 1px #000;
+
+    /* Box Shadows */
+    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.6),
+                       0 1px 0 #5e524f;
+    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.6),
+                     0 1px 0 #5e524f;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.6),
+                0 1px 0 #5e524f;
+    
+    /* Transition Effect */
+    -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* Sub Menu Unordered List Second Level Style */
+ul.dark_menu li ul {
+    display: none;
+}
+
+/* Before Second Level Unordered List Style */
+ul.dark_menu li ul:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    z-index: 1500;
+    left: 0;
+    top: -10px;
+    height: 10px;
+    width: 100%;
+}
+
+/* Sub Menu Unordered List Second Level Style
+    When Parent List Item is Hovered */
+ul.dark_menu li:hover ul {
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    left: 0;
+    top: 44px;
+    padding: 5px 0;
+    list-style: none;
+    background: @darkgradientend;
+
+    /* Box Shadows */
+    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.6),
+                       0 1px 0 #5e524f;
+    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.6),
+                     0 1px 0 #5e524f;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.6),
+                0 1px 0 #5e524f;
+
+    /* Border Radius */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* Second Level Menu List Items Style */
+ul.dark_menu li ul li {
+    float: none;
+    margin: 0 10px;                            
+    border-bottom: 1px solid #191614;
+    border-top: 1px solid #3a3230;
+}
+
+/* First List Item in Second Level Menu Style */
+ul.dark_menu li ul li:first-child {
+    margin: 0 10px;
+    border-top: 0 none;
+}
+
+/* Last List Item in Second Level Menu Style */
+ul.dark_menu li ul li:last-child {
+    border-bottom: 0 none;
+}
+
+/* Second Level List Items Links Style */
+ul.dark_menu li ul li a, ul.dark_menu li ul li a:link {
+    color: @hovercolor;
+    display: block;
+    background: transparent none;
+    padding: 10px 20px 10px 5px;
+    white-space: nowrap;
+
+    /* Text Shadow */
+    text-shadow: 0 1px 2px #000;
+                                
+    /* Box Shadows */
+    -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+    -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+
+    /* Border Radius */
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+/* Second Level List Items Links Hover State Style */
+ul.dark_menu li ul li a:hover {
+    text-decoration: underline;
+    background: #2a2523;
+}
+
+/*--------- Dark Menu Styles End ---------*/
+/*----------------------------------------*/
+
+/* 
+------------------------------------------------
+begin password strength metter style
+------------------------------------------------
+*/
+
+.strengthMeter {
+	border: 1px solid #B5B8C8;
+	width:160px;
+	height:12px;
+	margin: 3px 0 3px 0;
+	background-image: url(meter_background.gif);
+}
+.strengthMeter-focus {
+	border: 1px solid #000;
+}
+.scoreBar {
+	background-image: url(meter.gif);
+	height: 12px;
+	width: 0;
+	line-height: 1px;
+	font-size: 1px;
+	border: 0px;
+}
+
+/* 
+------------------------------------------------
+end password strength metter style
+------------------------------------------------
+*/
+
+/* 
+------------------------------------------------
+begin YUI 3 panel
+------------------------------------------------
+*/
+
+.yui3-panel .yui3-button{
+    margin: 0.3em 0.6em;
+}
+.yui3-panel .yui3-panel-content .yui3-widget-bd{
+    text-align: center;
+    padding: 1.5em 0 1.8em;
+}
+.yui3-panel .yui3-panel-content .yui3-widget-ft{
+    border-radius: 0 0 3px 3px;
+    background-color: #969696;
+    border-top: solid 1px @backgroundcolor;
+}
+.yui3-panel .yui3-panel-content {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #A9A9A9;
+    box-shadow: 6px 6px 6px @textlightcolor;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.yui3-panel .yui3-widget-bd .message{
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    color:@textcolor;
+    padding: 11px 0 14px 50px;
+} 
+.yui3-panel .yui3-widget-bd .dialog-none {
+    background-image: none;
+    padding-left: 0;    
+    width: 82%;
+    text-align: center;
+} 
+.yui3-panel .yui3-widget-bd .dialog-info {
+    height:80px;
+    background-repeat: no-repeat;
+    background-image: url(assets/skins/sam/dialog_info.png);
+}
+.yui3-panel .yui3-widget-bd .dialog-sucess {
+    height:30px;
+    background-repeat: no-repeat;
+    background-image: url(assets/skins/sam/dialog_sucess.png);
+}
+.yui3-panel .yui3-widget-bd .dialog-question {
+    height:30px;
+    background-repeat: no-repeat;
+    background-image: url(assets/skins/sam/dialog_question.png);
+} 
+.yui3-panel .yui3-widget-bd .dialog-stop {
+    height:30px;
+    background-repeat: no-repeat;
+    background-image: url(assets/skins/sam/dialog_stop.png);
+}
+
+
+/* 
+------------------------------------------------
+end YUI 3 panel
+------------------------------------------------
+*/
+
+/* 
+------------------------------------------------
+begin autosuggest, inquisitor style
+------------------------------------------------
+*/
+
+div.autosuggest
+{
+	position: absolute;
+	background-image: url(assets/skins/inq/as_pointer.gif);
+	background-position: top;
+	background-repeat: no-repeat;
+	padding: 10px 0 0 0;
+}
+
+div.autosuggest div.as_header,
+div.autosuggest div.as_footer
+{
+	position: relative;
+	height: 6px;
+	padding: 0 6px;
+	background-image: url(assets/skins/inq/ul_corner_tr.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+div.autosuggest div.as_footer
+{
+	background-image: url(assets/skins/inq/ul_corner_br.gif);
+}
+
+div.autosuggest div.as_header div.as_corner,
+div.autosuggest div.as_footer div.as_corner
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 6px;
+	width: 6px;
+	background-image: url(assets/skins/inq/ul_corner_tl.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+div.autosuggest div.as_footer div.as_corner
+{
+	background-image: url(assets/skins/inq/ul_corner_bl.gif);
+}
+div.autosuggest div.as_header div.as_bar,
+div.autosuggest div.as_footer div.as_bar
+{
+	height: 6px;
+	overflow: hidden;
+	background-color: #333;
+}
+
+
+div.autosuggest ul
+{
+	list-style: none;
+	margin: 0 0 -4px 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+div.autosuggest ul li
+{
+	color: #ccc;
+	padding: 0;
+	margin: 0 4px 4px;
+	text-align: left;
+}
+
+div.autosuggest ul li a
+{
+	color: #ccc;
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	text-shadow: #000 0px 0px 5px;
+	position: relative;
+	padding: 0;
+	width: 100%;
+}
+div.autosuggest ul li a:hover
+{
+	background-color: #444;
+}
+div.autosuggest ul li.as_highlight a:hover
+{
+	background-color: #7bb618;
+}
+
+div.autosuggest ul li a span
+{
+	display: block;
+	padding: 3px 6px;
+	font-weight: bold;
+}
+
+div.autosuggest ul li a span small
+{
+	font-weight: normal;
+	color: #999;
+}
+
+div.autosuggest ul li.as_highlight a span small
+{
+	color: #ccc;
+}
+
+div.autosuggest ul li.as_highlight a
+{
+	color: #fff;
+	background-color: #7bb618;
+	background-image: url(assets/skins/inq/hl_corner_br.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+div.autosuggest ul li.as_highlight a span
+{
+	background-image: url(assets/skins/inq/hl_corner_bl.gif);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+
+div.autosuggest ul li a .tl,
+div.autosuggest ul li a .tr
+{
+	background-image: transparent;
+	background-repeat: no-repeat;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+div.autosuggest ul li a .tr
+{
+	right: 0;
+}
+
+div.autosuggest ul li.as_highlight a .tl
+{
+	left: 0;
+	background-image: url(assets/skins/inq/hl_corner_tl.gif);
+	background-position: bottom left;
+}
+
+div.autosuggest ul li.as_highlight a .tr
+{
+	right: 0;
+	background-image: url(assets/skins/inq/hl_corner_tr.gif);
+	background-position: bottom right;
+}
+
+div.autosuggest ul li.as_warning
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+div.autosuggest ul em
+{
+	font-style: normal;
+	color: @textlightcolor;
+}
+
+/* 
+------------------------------------------------
+end autosuggest, inquisitor style
+------------------------------------------------
+*/
+
+/* 
+------------------------------------------------
+begin Ruwix, progress bar
+http://ruwix.com/simple-javascript-html-css-slider-progress-bar/
+------------------------------------------------
+*/
+
+.szlider{
+	width:100%;
+	height:15px;
+	border:1px solid #000;
+	overflow:hidden;
+	background: #cedce7;
+	background: -moz-linear-gradient(top,  #cedce7 0%, #596a72 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cedce7), color-stop(100%,#596a72));
+	background: -webkit-linear-gradient(top,  #cedce7 0%,#596a72 100%);
+	background: -o-linear-gradient(top,  #cedce7 0%,#596a72 100%);
+	background: -ms-linear-gradient(top,  #cedce7 0%,#596a72 100%);
+	background: linear-gradient(top,  #cedce7 0%,#596a72 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 );
+}
+.szliderbar{
+	width:37%;
+	height:15px;
+	background: #59d646;
+	background: -moz-linear-gradient(top,  #59d646 0%, #4bcb2f 40%, #23a000 56%, #51e321 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#59d646), color-stop(40%,#4bcb2f), color-stop(56%,#23a000), color-stop(100%,#51e321));
+	background: -webkit-linear-gradient(top,  #59d646 0%,#4bcb2f 40%,#23a000 56%,#51e321 100%);
+	background: -o-linear-gradient(top,  #59d646 0%,#4bcb2f 40%,#23a000 56%,#51e321 100%);
+	background: -ms-linear-gradient(top,  #59d646 0%,#4bcb2f 40%,#23a000 56%,#51e321 100%);
+	background: linear-gradient(top,  #59d646 0%,#4bcb2f 40%,#23a000 56%,#51e321 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59d646', endColorstr='#51e321',GradientType=0 );
+}
+.szazalek {
+	color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    left: 25px;
+    position: relative;
+    top: -16px;
+}
+
+/* 
+------------------------------------------------
+end Ruwix, progress bar
+http://ruwix.com/simple-javascript-html-css-slider-progress-bar/
+------------------------------------------------
+*/

@@ -1,0 +1,4 @@
+Estimado {#1}:
+Gracias por registrarse en zesped.
+Para activar su cuenta de usuario haga click en el siguiente enlace:
+http://www.zesped.com/zesped/ActivateUser.action?id={#2}&uid={#3}
